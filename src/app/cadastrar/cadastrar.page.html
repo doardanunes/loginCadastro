@@ -1,0 +1,77 @@
+<ion-header>
+  <ion-toolbar color="danger">
+    <ion-title>Cadastro</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-card>
+
+    <div align="center">
+      <h6><b>Informe seu gênero</b></h6>
+      </div>
+
+    <ion-toolbar>
+      <ion-segment value="all">
+        <ion-segment-button value="all">
+          Feminino
+        </ion-segment-button>
+        <ion-segment-button value="favorites">
+          Masculino
+        </ion-segment-button>
+      </ion-segment>
+    </ion-toolbar>
+
+
+    <ion-item>
+      <ion-label position="floating">Nome</ion-label>
+      <ion-input clearInput [(ngModel)]="nome"></ion-input>
+    </ion-item>
+    
+    <ion-item>
+      <ion-label position="floating">CPF</ion-label>
+      <ion-input clearInput [(ngModel)]="cpf"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Data de nascimento</ion-label>
+      <ion-input clearInput [(ngModel)]="data"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Celular</ion-label>
+      <ion-input clearInput [(ngModel)]="celular"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Email</ion-label>
+      <ion-input clearInput [(ngModel)]="email"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Senha</ion-label>
+      <ion-input clearInput [(ngModel)]="senha"
+      type="password" value="123456789" id="senha"></ion-input>
+    </ion-item>
+    
+    <ion-item>
+      <ion-label position="floating">Confirmar Senha</ion-label>
+      <ion-input clearInput [(ngModel)]="confirmarsenha"
+      type="password" value="123456789" id="senha"></ion-input>
+    </ion-item>
+
+    </ion-card>
+
+    <div align="center">
+      <ion-button expand="block" size="small"color="light" (click)="apagar()">Limpar</ion-button>
+      <ion-button expand="block" size="small" color="primary" (click)="salvar()">Salvar</ion-button>
+    </div>
+
+    <div align="center">
+    <h6><b>{{mensagem}}</b></h6>
+    </div>
+
+    <ion-button color="light" size="small" routerLink="/home"> Voltar </ion-button>
+
+</ion-content>
